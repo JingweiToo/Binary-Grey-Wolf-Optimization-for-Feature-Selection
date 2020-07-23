@@ -12,7 +12,7 @@
 % label: labelling
 % N:     Number of wolves
 % T:     Maximum number of iterations
-% *Note: k-value of KNN & k-fold setting can be modified in jFitnessFunction.m
+% *Note: k-value of KNN & hold-out setting can be modified in jFitnessFunction.m
 %---Output-----------------------------------------------------------------
 % sFeat: Selected features (instances x features)
 % Sf:    Selected feature index
@@ -31,6 +31,7 @@ N=10; T=100;
 % Plot convergence curve
 figure(); plot(1:T,curve); xlabel('Number of Iterations');
 ylabel('Fitness Value'); title('BGWO'); grid on;
+
 
 %% Binary Grey Wolf Optimization (Version 2)
 clc, clear, close 

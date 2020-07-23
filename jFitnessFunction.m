@@ -7,21 +7,21 @@
 %-------------------------------------------------------------------------%  
 
 function fitness=jFitnessFunction(feat,label,X)
-% Parameter setting for k-value of KNN
-k=5; 
-% Parameter setting for number of cross-validation
-kfold=2;
 if sum(X==1)==0
   fitness=inf;
 else
-  fitness=jwrapperKNN(feat(:,X==1),label,k,kfold);
+  fitness=jwrapperKNN(feat(:,X==1),label);
 end
 end
 
 
-function ER=jwrapperKNN(feat,label,k,kfold)
+function ER=jwrapperKNN(feat,label)
+%---// Parameter setting for k-value of KNN //
+k=5; 
+%---// Parameter setting for hold-out (20% for testing set) //
+ho=0.2;
 Model=fitcknn(feat,label,'NumNeighbors',k,'Distance','euclidean'); 
-C=crossval(Model,'KFold',kfold);
+C=crossval(Model,'holdout',ho);
 ER=kfoldLoss(C);
 end
 

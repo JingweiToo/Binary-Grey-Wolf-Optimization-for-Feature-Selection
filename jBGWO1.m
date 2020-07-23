@@ -37,7 +37,7 @@ end
 Xalpha=X(idx(1),:); Xbeta=X(idx(2),:); Xdelta=X(idx(3),:);
 Falpha=fit(idx(1)); Fbeta=fit(idx(2)); Fdelta=fit(idx(3));
 curve=inf; t=1; 
-figure(1); clf; axis([1 100 0 0.3]); xlabel('Number of Iterations');
+figure(1); clf; axis([1 100 0 0.2]); xlabel('Number of Iterations');
 ylabel('Fitness Value'); title('Convergence Curve'); grid on;
 %---Iterations start-------------------------------------------------------
 while t <= T
