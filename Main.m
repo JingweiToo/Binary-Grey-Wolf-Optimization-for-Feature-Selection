@@ -12,7 +12,6 @@
 % label: labelling
 % N:     Number of wolves
 % T:     Maximum number of iterations
-% *Note: k-value of KNN & hold-out setting can be modified in jFitnessFunction.m
 %---Output-----------------------------------------------------------------
 % sFeat: Selected features (instances x features)
 % Sf:    Selected feature index
@@ -24,26 +23,34 @@
 clc, clear, close 
 % Benchmark data set 
 load ionosphere.mat; 
+% Set 20% data as validation set
+ho=0.2; 
+% Hold-out method
+HO=cvpartition(label,'HoldOut',ho,'Stratify',false);
 % Parameter setting
 N=10; T=100;
 % Binary Grey Wolf Optimization 
-[sFeat,Sf,Nf,curve]=jBGWO1(feat,label,N,T); 
+[sFeat,Sf,Nf,curve]=jBGWO1(feat,label,N,T,HO); 
 % Plot convergence curve
 figure(); plot(1:T,curve); xlabel('Number of Iterations');
-ylabel('Fitness Value'); title('BGWO'); grid on;
+ylabel('Fitness Value'); title('BGWO1'); grid on;
 
 
 %% Binary Grey Wolf Optimization (Version 2)
 clc, clear, close 
 % Benchmark data set 
 load ionosphere.mat; 
+% Set 20% data as validation set
+ho=0.2; 
+% Hold-out method
+HO=cvpartition(label,'HoldOut',ho,'Stratify',false);
 % Parameter setting
 N=10; T=100;
 % Binary Grey Wolf Optimization
-[sFeat,Sf,Nf,curve]=jBGWO2(feat,label,N,T); 
+[sFeat,Sf,Nf,curve]=jBGWO2(feat,label,N,T,HO); 
 % Plot convergence curve
 figure(); plot(1:T,curve); xlabel('Number of Iterations');
-ylabel('Fitness Value'); title('BGWO'); grid on;
+ylabel('Fitness Value'); title('BGWO2'); grid on;
 
 
 
