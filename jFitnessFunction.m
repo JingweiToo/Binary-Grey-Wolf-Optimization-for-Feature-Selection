@@ -1,3 +1,5 @@
+% Notation: This fitness function is for demonstration 
+
 function fitness=jFitnessFunction(feat,label,X,HO)
 if sum(X==1)==0
   fitness=inf;
