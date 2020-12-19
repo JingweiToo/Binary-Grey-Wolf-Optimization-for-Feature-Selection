@@ -56,16 +56,6 @@ title('BGWO2'); grid on;
 
 ## Cite As
 ```code
-@article{too2020opposition,
-  title={Opposition based competitive grey wolf optimizer for EMG feature selection},
-  author={Too, Jingwei and Abdullah, Abdul Rahim},
-  journal={Evolutionary Intelligence},
-  pages={1--15},
-  year={2020},
-  publisher={Springer}
-}
-
-
 @article{too2018new,
   title={A new competitive binary Grey Wolf Optimizer to solve the feature selection problem in EMG signals classification},
   author={Too, Jingwei and Abdullah, Abdul Rahim and Mohd Saad, Norhashimah and Mohd Ali, Nursabillilah and Tee, Weihown},
@@ -75,6 +65,16 @@ title('BGWO2'); grid on;
   pages={58},
   year={2018},
   publisher={Multidisciplinary Digital Publishing Institute}
+}
+
+
+@article{too2020opposition,
+  title={Opposition based competitive grey wolf optimizer for EMG feature selection},
+  author={Too, Jingwei and Abdullah, Abdul Rahim},
+  journal={Evolutionary Intelligence},
+  pages={1--15},
+  year={2020},
+  publisher={Springer}
 }
 
 ```
