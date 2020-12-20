@@ -76,6 +76,5 @@ title('BGWO2'); grid on;
   year={2020},
   publisher={Springer}
 }
-
 ```
 
