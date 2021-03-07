@@ -57,7 +57,7 @@ title('BGWO2'); grid on;
 * Statistics and Machine Learning Toolbox
 
 
-## Please consider to cite my article 
+## Please consider citing my article 
 ```code
 @article{too2018new,
   title={A new competitive binary Grey Wolf Optimizer to solve the feature selection problem in EMG signals classification},
